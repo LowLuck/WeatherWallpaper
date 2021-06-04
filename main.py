@@ -11,7 +11,10 @@ def main(city):
     req2 = requests.get(
         f'http://dataservice.accuweather.com/currentconditions/v1/{location_key}?apikey={api_key}').json()
     if req2:
-        print(f'Weather right now:{req2[0]["WeatherText"]}')
-        main2()
+        print(f'Weather right now: {req2[0]["WeatherText"]}')
+        main2(location_key)
     else:
         print('Network Error...')
+
+
+
