@@ -1,5 +1,3 @@
-from main import main
-
 try:
     with open('user.txt', 'r') as file:
         city = file.read()
